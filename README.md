@@ -63,3 +63,81 @@ In the image below you can find some score examples.
 More about ten pin bowling here: http://en.wikipedia.org/wiki/Ten-pin_bowling
 
 ![Ten Pin Score Example](images/example_ten_pin_scoring.png)
+
+### Notes
+
+FIRST ROLL
+- Strike or Non-strike
+- succeeding spare or not succeeding spare
+- succeeding 2 strikes, 1 strike, no strikes
+
+SECOND ROLL
+- Spare or non-spare
+- succeeding spare or not succeeding spare
+- succeeding 2 strikes, 1 strikes or no strikes
+
+10 frames (21 possible throws)
+300 possible points
+
+As a bowler
+So that I can keep track of my game
+I want to be able to enter my points into a scorecard
+
+As a bowler
+So that I don't have to calculate my own game
+I want the scorecard to calculate my score
+
+As a bowler
+So that my score goes into the correct place
+I want the scorecard to know which frame and roll I am on
+
+As a bowler
+So that I know how well I did
+I want to be able to see my total points at the end
+
+| Nouns | Owner/Property |
+| ---------- | ---------- |
+| game | owner |
+| scorecard | owner |
+| regular points | property |
+| bonus points | property |
+| frame | property |
+| roll | property |
+
+| Actions | Owned by? |
+| ---------- | ---------- |
+| enter points | Scorecard |
+| calculate score | Scorecard |
+| see total | Scorecard |
+| strike | Scorecard |
+| spare | Scorecard |
+
+| Actions | Property it reads or changes |
+| --------- | ---------- |
+| enter points | Regular points |
+| calculate score | frame, roll, points |
+| see total | Regular & bonus points |
+| strike | Bonus points |
+| spare | Bonus points |
+
+| Class | Game |
+| --------- | ---------- |
+| Properties | frame, roll,  |
+|
+
+| Class | Scorecard |
+| ---------- | ---------- |
+| Properties | regular points, bonus points |
+| Actions | enter, calculate, total, strike, spare |
+
+10
+5
+5
+10
+4
+3
+
+10 5 5
+5 5 10
+10 4 3
+4 3
