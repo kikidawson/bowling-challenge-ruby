@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'scorecard'
 
 describe Scorecard do
@@ -11,7 +13,7 @@ describe Scorecard do
     subject.roll(3)
     subject.roll(4)
 
-    expect(subject.frames).to eq [[3,4]]
+    expect(subject.frames).to eq [[3, 4]]
   end
 
   it 'takes frame points and stores them' do
@@ -127,5 +129,4 @@ describe Scorecard do
 
     expect(subject.total).to eq 300
   end
-
 end
